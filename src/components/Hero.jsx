@@ -9,7 +9,7 @@ import afterImage from "../assets/after.jpg";
 
 const Hero = () => {
   return (
-    <section className="pt-20 pb-20 md:pb-32 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+    <section className="pt-28 pb-20 md:pb-32 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100 rounded-full -translate-y-36 translate-x-36 opacity-50"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-50 rounded-full translate-y-48 -translate-x-48 opacity-40"></div>
@@ -157,23 +157,16 @@ const Hero = () => {
             <span>Professional Grade Retouching</span>
           </motion.div> */}
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight"
-          >
-            Transform Your <span className="text-blue-700">Photos</span> With Expert Retouching
-          </motion.h1>
+          
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-gray-600 max-w-lg"
           >
             Professional retouching that enhances your images while keeping them natural. Fast, affordable, and high quality.
-          </motion.p>
+          </motion.p> */}
 
           
 
@@ -197,6 +190,16 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col gap-4 w-full max-w-xs"
           >
+            <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight"
+          >
+            Transform Your <span className="text-blue-700">Photos</span> With Expert Retouching
+          </motion.h1>
+
+
             <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors shadow-lg">
               Get Started Now <FiArrowRight />
             </button>
@@ -206,7 +209,7 @@ const Hero = () => {
           </motion.div> 
 
           {/* Floating Cards (Stacked on mobile) */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -235,7 +238,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Mobile Features Grid */}
           <motion.div

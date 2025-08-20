@@ -23,9 +23,9 @@ export const NavBar = () => {
   };
 
   return (
-    <header className={`fixed right-0 left-0 top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/100 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+    <header className={`fixed right-0 left-0 top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-white/95'}`}>
       {/* Top Bar */}
-      {/* <div className="flex justify-center items-center gap-3 bg-gradient-to-r from-blue-900 to-blue-800 py-2.5 text-white text-sm">
+       <div className="flex justify-center items-center gap-3 bg-gradient-to-r from-blue-900 to-blue-800 py-2.5 text-white text-sm">
         <p className="text-blue-100 md:block hidden">
           Professional photo retouching for photographers and studios
         </p>
@@ -33,7 +33,7 @@ export const NavBar = () => {
           <p>Start your free trial</p>
           <FiArrowRight className="h-3.5 w-3.5" />
         </div>
-      </div> */}
+      </div> 
 
       {/* Header Main */}
       <div className="py-4">
