@@ -9,7 +9,7 @@ import afterImage from "../assets/after.jpg";
 
 const Hero = () => {
   return (
-    <section className="pt-28 pb-20 md:pb-32 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+    <section className="pt-20 pb-20 md:pb-32 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100 rounded-full -translate-y-36 translate-x-36 opacity-50"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-50 rounded-full translate-y-48 -translate-x-48 opacity-40"></div>
