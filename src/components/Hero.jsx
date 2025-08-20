@@ -16,134 +16,66 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* ==================== DESKTOP VERSION (Hidden on mobile) ==================== */}
-        <div className="hidden lg:flex flex-col lg:flex-row items-center gap-12">
-          {/* Text Content */}
-          <div className="lg:w-1/2 text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
-            >
-              <FiAward className="text-amber-500" />
-              <span>Professional Grade Retouching</span>
-            </motion.div>
+<div className="hidden lg:flex flex-col lg:flex-row items-center justify-center gap-12 px-8">
+  {/* Text Content */}
+  <div className="lg:w-1/2 text-center lg:text-left max-w-xl">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+    >
+      <FiAward className="text-amber-500" />
+      <span>Professional Retouching</span>
+    </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
-            >
-              Transform Your <span className="text-blue-700">Photography</span> With Expert Retouching
-            </motion.h1>
+    <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
+    >
+      Elevate Your Photos with <span className="text-blue-700">Expert Retouching</span>
+    </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-gray-600 mt-6 max-w-2xl"
-            >
-              Professional photo retouching services that enhance your images while preserving their natural beauty. Fast turnaround, consistent quality, and affordable pricing.
-            </motion.p>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="text-lg text-gray-600 mt-6"
+    >
+      Fast, high-quality retouching that enhances your images naturally.
+    </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-8 flex flex-col sm:flex-row gap-4 justify-start"
-            >
-              <button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors shadow-lg">
-                Get Started Now <FiArrowRight />
-              </button>
-              <button className="border border-blue-700 text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors">
-                View Portfolio <FiArrowRight />
-              </button>
-            </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+    >
+      <button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors shadow-lg">
+        Get Started Now <FiArrowRight />
+      </button>
+      <button className="border border-blue-700 text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors">
+        View Portfolio <FiArrowRight />
+      </button>
+    </motion.div>
+  </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-10 grid grid-cols-2 gap-6 max-w-md"
-            >
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <FiCheck className="text-blue-700 text-lg" />
-                </div>
-                <span className="text-gray-700 font-medium">24h Delivery</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <FiStar className="text-blue-700 text-lg" />
-                </div>
-                <span className="text-gray-700 font-medium">Premium Quality</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <FiClock className="text-blue-700 text-lg" />
-                </div>
-                <span className="text-gray-700 font-medium">Unlimited Revisions</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <FiAward className="text-blue-700 text-lg" />
-                </div>
-                <span className="text-gray-700 font-medium">Satisfaction Guaranteed</span>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Image & Floating Cards */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="lg:w-1/2 relative flex flex-col items-center gap-6"
-          >
-            <BeforeAfterComparison
-              beforeImage={beforeImage}
-              afterImage={afterImage}
-              altText="Professional photo retouching example"
-            />
-
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-              <motion.div
-                className="bg-white p-4 rounded-xl shadow-lg border border-gray-100"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.8, duration: 0.5 }}
-              >
-                <div className="flex items-center gap-2">
-                  <div className="bg-blue-100 p-2 rounded-full">
-                    <FiStar className="text-amber-500" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">4.9/5 Rating</p>
-                    <p className="text-xs text-gray-500">From 250+ clients</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white p-4 rounded-xl shadow-lg border border-gray-100"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
-              >
-                <div className="flex items-center gap-2">
-                  <div className="bg-blue-100 p-2 rounded-full">
-                    <FiClock className="text-blue-600" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">24h Delivery</p>
-                    <p className="text-xs text-gray-500">Express option available</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
+  {/* Image Only (Floating cards removed) */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.7, delay: 0.5 }}
+    className="lg:w-1/2 flex justify-center"
+  >
+    <BeforeAfterComparison
+      beforeImage={beforeImage}
+      afterImage={afterImage}
+      altText="Professional photo retouching example"
+    />
+  </motion.div>
+</div>
 
         {/* ==================== MOBILE VERSION (Shown only on mobile) ==================== */}
         <div className="lg:hidden flex flex-col items-center text-center gap-8">
