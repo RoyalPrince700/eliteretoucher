@@ -5,8 +5,6 @@ import NavBar from './components/NavBar';
 import Auth from './pages/Auth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import NavBarNew from './components/NavBarNew';
-import Timetable from './pages/TimeTable';
 import SideBar from './components/SideBar';
 import Footer from './components/Footer';
 import PricingPage from './pages/PricingPage';
@@ -28,7 +26,6 @@ const App = () => {
           <Route path='/' element={<Home/>}/>
           <Route path='/services' element={<Services/>}/>
           <Route path='/pricing' element={<PricingPage/>}/>
-          <Route path='/timetable' element={<Timetable/>}/>
 
           {/* Protected Routes - Require Authentication */}
           <Route path='/dashboard' element={
