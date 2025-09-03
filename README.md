@@ -156,14 +156,5 @@ The website is fully responsive with breakpoints:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Support
-
-For support and questions:
-- Create an issue in the repository
-- Contact the development team
-
----
 
 Built with ❤️ for professional photographers and their clients.

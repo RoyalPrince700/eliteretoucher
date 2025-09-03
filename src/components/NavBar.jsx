@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import LOGO from "../assets/eliteretoucher-logo.png";
 
@@ -35,6 +36,11 @@ export const NavBar = () => {
     setIsMenuOpen(false);
   };
 
+  // Function to handle logo click and redirect to home
+  const handleLogoClick = () => {
+    window.location.href = "/"; // Redirect to home
+  };
+
   return (
     <>
       {/* Header */}
@@ -46,21 +52,24 @@ export const NavBar = () => {
         <div className="py-4">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between">
-              {/* Logo */}
-              <div className="flex items-center">
+              {/* Logo - Now clickable */}
+              <div className="flex items-center cursor-pointer" onClick={handleLogoClick}>
                 <img src={LOGO} alt="EliteRetoucher Logo" className="h-9 w-auto" />
               </div>
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex gap-8 text-gray-700 items-center">
-                <a href="#services" className="hover:text-blue-700 transition-colors font-medium">Services</a>
+                <Link to="/services" className="hover:text-blue-700 transition-colors font-medium">Services</Link>
                 <a href="#portfolio" className="hover:text-blue-700 transition-colors font-medium">Portfolio</a>
-                <a href="#pricing" className="hover:text-blue-700 transition-colors font-medium">Pricing</a>
+                <a href="/pricing" className="hover:text-blue-700 transition-colors font-medium">Pricing</a>
                 <a href="#about" className="hover:text-blue-700 transition-colors font-medium">About</a>
                 <a href="#contact" className="hover:text-blue-700 transition-colors font-medium">Contact</a>
-                <button className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2.5 rounded-md transition-colors font-medium shadow-md">
+                <Link
+                  to="/auth"
+                  className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2.5 rounded-md transition-colors font-medium shadow-md inline-block"
+                >
                   Get Started
-                </button>
+                </Link>
               </nav>
 
               {/* Mobile Menu Button */}
@@ -100,17 +109,18 @@ export const NavBar = () => {
 
         {/* Mobile Nav */}
         <nav className="flex flex-col items-center space-y-8 text-white text-xl">
-          <a href="#services" onClick={closeMenu} className="hover:text-blue-200 transition-colors py-2 font-medium">Services</a>
+          <Link to="/services" onClick={closeMenu} className="hover:text-blue-200 transition-colors py-2 font-medium">Services</Link>
           <a href="#portfolio" onClick={closeMenu} className="hover:text-blue-200 transition-colors py-2 font-medium">Portfolio</a>
           <a href="#pricing" onClick={closeMenu} className="hover:text-blue-200 transition-colors py-2 font-medium">Pricing</a>
           <a href="#about" onClick={closeMenu} className="hover:text-blue-200 transition-colors py-2 font-medium">About</a>
           <a href="#contact" onClick={closeMenu} className="hover:text-blue-200 transition-colors py-2 font-medium">Contact</a>
-          <button
-            className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md font-medium mt-4 transition-colors shadow-md"
+          <Link
+            to="/auth"
+            className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md font-medium mt-4 transition-colors shadow-md inline-block"
             onClick={closeMenu}
           >
             Get Started
-          </button>
+          </Link>
         </nav>
 
         {/* Footer info */}

@@ -13,10 +13,10 @@ import Footer from '../components/Footer'
 const Home = () => {
   return (
     <div>
-      <NavBar/>
+      {/* <NavBar/> */}
       <Hero/>
       <LogoTicker/>
-      <ProductShowcase/>
+      {/* <ProductShowcase/> */}
       <Pricing/>
       <Testimonials/>
       <CallToAction/>

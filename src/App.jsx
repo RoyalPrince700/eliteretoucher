@@ -2,35 +2,53 @@ import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
-import Signup from './pages/SignUp';
-import Signin from './pages/SignIn';
+import Auth from './pages/Auth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NavBarNew from './components/NavBarNew';
 import Timetable from './pages/TimeTable';
 import SideBar from './components/SideBar';
 import Footer from './components/Footer';
-
-
+import PricingPage from './pages/PricingPage';
+import Services from './components/Services';
+import Dashboard from './components/DashBoard';
+import { AuthProvider } from './context';
+import { ProtectedRoute, GuestRoute } from './components/auth';
 
 const App = () => {
   return (
-    <div className=''>
-      <ToastContainer/>
-      {/* <NavBarNew/> */}
-      {/* <SideBar/> */}
-      {/* <NavBar/>  */}
-      <Routes>
-        
-        <Route path='/' element={<Home/>}/>
-        <Route path='/signup' element={<Signup/>}/>
-        <Route path='/signin' element={<Signin/>}/>
-        <Route path='/timetable' element={<Timetable/>}/>
+    <AuthProvider>
+      <div className=''>
+        <ToastContainer/>
+        {/* <NavBarNew/> */}
+        {/* <SideBar/> */}
+        <NavBar/>
+        <Routes>
 
-      </Routes>
-      <Footer />
+          <Route path='/' element={<Home/>}/>
+          <Route path='/services' element={<Services/>}/>
+          <Route path='/pricing' element={<PricingPage/>}/>
+          <Route path='/timetable' element={<Timetable/>}/>
 
-    </div>
+          {/* Protected Routes - Require Authentication */}
+          <Route path='/dashboard' element={
+            <ProtectedRoute>
+              <Dashboard/>
+            </ProtectedRoute>
+          }/>
+
+          {/* Guest Routes - Only accessible when not authenticated */}
+          <Route path='/auth' element={
+            <GuestRoute>
+              <Auth/>
+            </GuestRoute>
+          }/>
+
+        </Routes>
+        <Footer />
+
+      </div>
+    </AuthProvider>
   )
 }
 

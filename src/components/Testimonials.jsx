@@ -15,58 +15,67 @@ import { motion } from "framer-motion";   // For animation
 
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+    text: "As a fashion photographer, EliteRetoucher has transformed my workflow. The quality is consistently exceptional and the turnaround time is impressive.",
     imageSrc: avatar1,
     name: "Jamie Rivera",
-    username: "@jamietechguru00",
+    username: "@jamie_fashionphoto",
+    role: "Fashion Photographer"
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool.",
+    text: "Our e-commerce business relies on EliteRetoucher for all our product images. The consistency and quality have helped boost our conversion rates significantly.",
     imageSrc: avatar2,
     name: "Josh Smith",
-    username: "@jjsmith",
+    username: "@jjsmithretail",
+    role: "E-commerce Director"
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
+    text: "The magazine retouching service is absolutely worth every penny. Our editorial team has never been happier with the final results.",
     imageSrc: avatar3,
     name: "Morgan Lee",
-    username: "@morganleewhiz",
+    username: "@morganleeeditor",
+    role: "Magazine Editor"
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+    text: "I was amazed at how quickly they understood my brand's aesthetic. The retouching is always perfect and on-brand.",
     imageSrc: avatar4,
     name: "Casey Jordan",
-    username: "@caseyj",
+    username: "@caseyjbrands",
+    role: "Brand Manager"
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
+    text: "Planning and executing photoshoots has never been easier knowing EliteRetoucher has my back in post-production. They never miss a deadline.",
     imageSrc: avatar5,
     name: "Taylor Kim",
-    username: "@taylorkimm",
+    username: "@taylorkimphoto",
+    role: "Wedding Photographer"
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
+    text: "The customizability and attention to detail are top-notch. They always deliver exactly what I envision for my portraits.",
     imageSrc: avatar6,
-    name: "Riley Smith",
-    username: "@rileysmith1",
+    name: "Riley Chen",
+    username: "@rileyportraits",
+    role: "Portrait Photographer"
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
+    text: "Adopting EliteRetoucher for our agency has streamlined our workflow and improved client satisfaction across the board.",
     imageSrc: avatar7,
-    name: "Jordan Patels",
-    username: "@jpatelsdesign",
+    name: "Jordan Patel",
+    username: "@jpatelsstudio",
+    role: "Studio Owner"
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+    text: "With the Diamond plan, we can easily manage high-volume projects with consistent quality. The dedicated account manager makes all the difference.",
     imageSrc: avatar8,
     name: "Sam Dawson",
-    username: "@dawsontechtips",
+    username: "@dawsoncommercial",
+    role: "Commercial Photographer"
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
+    text: "The user-friendly portal and robust features support our diverse needs. The before/after comparison tool is particularly impressive.",
     imageSrc: avatar9,
     name: "Casey Harper",
-    username: "@casey09",
+    username: "@casey09photo",
+    role: "Product Photographer"
   },
 ];
 
@@ -90,20 +99,21 @@ const TestimonialsColumn = ({ className, testimonials, duration }) => (
     >
       {[...new Array(2)].fill(0).map((_, index) => (
         <React.Fragment key={index}>
-          {testimonials.map(({ text, imageSrc, name, username }) => (
-            <div key={name} className="card">
-              <div>{text}</div>
-              <div className="flex items-center gap-2 mt-5">
+          {testimonials.map(({ text, imageSrc, name, username, role }) => (
+            <div key={name} className="card bg-gradient-to-b from-white to-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm">
+              <div className="text-gray-700 italic">"{text}"</div>
+              <div className="flex items-center gap-3 mt-5">
                 <img
                   src={imageSrc}
                   alt={name}
                   width={40}
                   height={40}
-                  className="h-10 w-10 rounded-full"
+                  className="h-10 w-10 rounded-full object-cover border-2 border-primary-100"
                 />
                 <div className="flex flex-col">
-                  <div className="font-medium tracking-tight leading-5">{name}</div>
-                  <div className="leading-5 tracking-tight">{username}</div>
+                  <div className="font-medium tracking-tight leading-5 text-gray-900">{name}</div>
+                  <div className="leading-5 tracking-tight text-primary-600 text-sm">{role}</div>
+                  <div className="leading-4 tracking-tight text-gray-500 text-xs">{username}</div>
                 </div>
               </div>
             </div>
@@ -116,16 +126,16 @@ const TestimonialsColumn = ({ className, testimonials, duration }) => (
 
 const Testimonials = () => {
   return (
-    <section className="bg-white">
-      <div className="container">
-        <div className="section-heading">
-          <div className="flex justify-center">
-            <div className="tag">Testimonials</div>
+    <section className="bg-gradient-to-b from-gray-50 to-white py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center rounded-full bg-primary-100 px-4 py-2 text-sm font-medium text-primary-700 mb-6">
+            Testimonials
           </div>
 
-          <h2 className="section-title">What our users say</h2>
-          <p className="section-description mt-5">
-            From intuitive design to powerful features, our app has become an essential tool for users around the world.
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            From professional photographers to creative agencies, our clients love the quality and consistency of our retouching services.
           </p>
         </div>
 
